@@ -15,7 +15,7 @@ function set_virtualenv () {
   fi
 }
 PROMPT_COMMAND=set_virtualenv
-PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u@\h\[\e[m\]:\w$(__git_ps1)\n\$ '
+PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u@\[\e[m\]\[\e[31m\]\h\[\e[m\]: \w$(__git_ps1)\n\$ '
 
 source ~/.bashrc
 
