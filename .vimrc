@@ -64,7 +64,6 @@ set updatetime=250
 "   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 let base16colorspace=256
-colorscheme base16-bright
 
 let g:airline_theme='base16_bright'
 let g:tmux_navigator_save_on_switch = 1
@@ -82,3 +81,4 @@ inoremap <silent> <c-j> <Esc>:TmuxNavigateDown<cr>
 inoremap <silent> <c-k> <Esc>:TmuxNavigateUp<cr>
 inoremap <silent> <c-l> <Esc>:TmuxNavigateRight<cr>
 inoremap <silent> <c-\> <Esc>:TmuxNavigatePrevious<cr>
+colorscheme base16-bright
