@@ -81,4 +81,8 @@ inoremap <silent> <c-j> <Esc>:TmuxNavigateDown<cr>
 inoremap <silent> <c-k> <Esc>:TmuxNavigateUp<cr>
 inoremap <silent> <c-l> <Esc>:TmuxNavigateRight<cr>
 inoremap <silent> <c-\> <Esc>:TmuxNavigatePrevious<cr>
+
 colorscheme base16-bright
+
+highlight Normal ctermbg=none
+highlight Nontext ctermbg=none
