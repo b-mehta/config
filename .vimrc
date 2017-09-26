@@ -32,8 +32,16 @@ set t_Co=256
 set autochdir
 set autowrite
 set autoread
+
+" some convenient numbering settings
 set number
+
+autocmd InsertEnter * :set relativenumber
+autocmd InsertLeave * :set norelativenumber
+
 set expandtab
+
+set noshowmode
 
 syntax on
 
