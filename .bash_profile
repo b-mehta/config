@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ~/config/git-prompt.sh
-source ~/config/git-completion.bash
+source ~/.config/git-prompt.sh
+source ~/.config/git-completion.bash
 
 if [ -f $(brew --prefix)/etc/bash_completion  ]; then
     source $(brew --prefix)/etc/bash_completion
