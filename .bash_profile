@@ -17,7 +17,7 @@ function set_virtualenv () {
 PROMPT_COMMAND=set_virtualenv
 
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]: \w$(__git_ps1 " (\[\e[34m\]%s\[\e[m\])")\n\$ '
+PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]: \w$(__git_ps1 " \[\e[34m\](%s)\[\e[m\]")\n\$ '
 
 source ~/.bashrc
 
