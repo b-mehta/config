@@ -6,4 +6,6 @@ BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell/
 
 set -o vi
 
+export CLICOLOR_FORCE=1
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
