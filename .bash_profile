@@ -17,10 +17,13 @@ function set_virtualenv () {
 PROMPT_COMMAND=set_virtualenv
 
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]: \w$(__git_ps1 " \[\e[34m\](%s)\[\e[m\]")\n\$ '
+PS1='${PYTHON_VIRTUALENV}\[\e[32m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]: \w$(__git_ps1 " \[\e[34m\](%s)\[\e[m\]")
+\[$(iterm2_prompt_mark)\]\$ '
 
 source ~/.bashrc
 
 export PATH=$PYENV_ROOT/bin:$PATH
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv virtualenv-init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
