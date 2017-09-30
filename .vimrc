@@ -49,7 +49,7 @@ syntax on
 set ts=4
 
 " indent when moving to the next line while writing code
-set autoindent
+set smartindent
 
 " when using the >> or << commands, shift lines by 4 spaces
 set shiftwidth=4
