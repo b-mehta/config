@@ -67,6 +67,9 @@ autocmd FileType python,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 set updatetime=250
 
+set wildmode=longest,list,full
+set wildmenu " experimental
+
 " autocmd CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
 " autocmd FileChangedShellPost *
 "   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
