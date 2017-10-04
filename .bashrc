@@ -9,4 +9,3 @@ set -o vi
 export CLICOLOR_FORCE=1
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.fzf.colors ] && source ~/.fzf.colors
