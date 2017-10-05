@@ -1,5 +1,3 @@
-set nocompatible
-
 call plug#begin()
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'chriskempson/base16-vim'
@@ -17,7 +15,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'sirver/ultisnips'
 Plug 'raimondi/delimitmate'
-Plug 'shougo/neocomplete.vim'
 Plug 'lervag/vimtex'
 Plug 'honza/vim-snippets'
 call plug#end()
@@ -32,7 +29,6 @@ set ruler		" show the cursor position all the time
 set t_Co=256
 set autochdir
 set autowrite
-set autoread
 
 " some convenient numbering settings
 set number
@@ -69,7 +65,6 @@ autocmd FileType python,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
 set updatetime=250
 
 set wildmode=longest,list,full
-set wildmenu " experimental
 
 " autocmd CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
 " autocmd FileChangedShellPost *
