@@ -93,3 +93,6 @@ colorscheme base16-bright
 
 highlight Normal ctermbg=none
 highlight Nontext ctermbg=none
+
+" vimtex/neovim
+let g:vimtex_compiler_progname='/Users/bmehta/.pyenv/shims/nvr'
