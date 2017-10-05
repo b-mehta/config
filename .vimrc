@@ -19,6 +19,7 @@ Plug 'sirver/ultisnips'
 Plug 'raimondi/delimitmate'
 Plug 'shougo/neocomplete.vim'
 Plug 'lervag/vimtex'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 filetype plugin on
