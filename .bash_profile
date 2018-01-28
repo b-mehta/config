@@ -43,5 +43,7 @@ export PATH=$PYENV_ROOT/bin:$PATH
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv virtualenv-init -)"
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
