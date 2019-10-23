@@ -8,15 +8,10 @@ if [ -f $(brew --prefix)/etc/bash_completion  ]; then
     source $(brew --prefix)/etc/bash_completion
 fi
 
-function set_virtualenv () {
-  if [[ `pyenv version-name` == "system" ]] ; then
-      PYTHON_VIRTUALENV=""
-  else
-      PYTHON_VIRTUALENV="(`pyenv version-name`) "
-  fi
-}
+eval "$(stack --bash-completion-script stack)"
+
 function settings () {
-    if [[ `pyenv version-name` == "system" ]] ; then
+    if [[ `pyenv version-name` == "usual" ]] ; then
         PYTHON_VIRTUALENV=""
         PY_STAT=""
     else
@@ -39,6 +34,11 @@ PS1='\[\e[33m\]${PYTHON_VIRTUALENV}\[\e[m\]\[\e[32m\]\u\[\e[m\]@\[\e[31m\]\h\[\e
 
 source ~/.bashrc
 
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export PATH="$HOME/.cabal/bin:$PATH"
+
 export PATH=$PYENV_ROOT/bin:$PATH
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv init -)"
 [ -x "$(command -v pyenv)" ] && eval "$(pyenv virtualenv-init -)"
@@ -47,8 +47,6 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # OPAM configuration
 . /Users/bmehta/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
